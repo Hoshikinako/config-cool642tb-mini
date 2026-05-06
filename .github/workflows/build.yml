@@ -2,4 +2,22 @@ on: [push, pull_request, workflow_dispatch]
 
 jobs:
   build:
-    uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@v0.3.0
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        include:
+          - board: seeeduino_xiao_ble
+            shield: cool642tb-mini_R
+          - board: seeeduino_xiao_ble
+            shield: cool642tb-mini_L
+          - board: seeeduino_xiao_ble
+            shield: settings_reset
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Build ZMK
+        uses: zmkfirmware/zmk/.github/workflows/build.yml@v0.3.0
+        with:
+          board: ${{ matrix.board }}
+          shield: ${{ matrix.shield }}
