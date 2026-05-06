@@ -53,21 +53,21 @@
             sensor-bindings = <&encoder_msc_down_up>;
         };
 
-        FUNCTION {
+        BLANK {
             bindings = <
-&kp N1    &kp N2     &kp N3     &kp N4     &kp N5                              &kp N6     &kp N7    &kp N8    &kp N9        &kp N0
-&kp PLUS  &kp MINUS  &kp ASTRK  &kp SLASH  &kp EQUAL  &kp UNDER      &kp HOME  &kp ENTER  &kp LEFT  &kp DOWN  &kp UP_ARROW  &kp RIGHT
-&kp F1    &kp F2     &kp F3     &kp F4     &kp F5     &trans         &trans    &kp F6     &kp F7    &kp F8    &kp F9        &kp F10
-&trans    &trans     &trans     &trans     &trans     &trans         &trans    &trans                                       &kp F11
+&trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                          &trans
             >;
         };
 
         MOUSE {
             bindings = <
-&bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                    &none     &none     &none     &none     &none
-&kp LEFT_SHIFT  &kp SEMI      &kp NUMBER_4  &kp N5        &kp N6        &none      &none  &mkp MB5  &mkp MB1  &mkp MB3  &mkp MB2  &none
-&none           &kp COLON     &kp N1        &kp N2        &kp N3        &none      &none  &mkp MB4  &mkp MB4  &mkp MB5  &none     &none
-&none           &none         &kp N0        &none         &none         &none      &none  &none                                   &bt BT_CLR
+&bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                      &trans    &trans    &trans    &trans    &trans
+&kp LEFT_SHIFT  &kp SEMI      &kp NUMBER_4  &kp N5        &kp N6        &trans      &trans  &mkp MB5  &mkp MB1  &mkp MB3  &mkp MB2  &trans
+&trans          &kp COLON     &kp N1        &kp N2        &kp N3        &trans      &trans  &mkp MB4  &mkp MB4  &mkp MB5  &trans    &trans
+&trans          &trans        &kp N0        &trans        &trans        &trans      &trans  &trans                                  &trans
             >;
         };
 
@@ -82,10 +82,10 @@
 
         SCROLL {
             bindings = <
-&trans          &trans   &kp F7   &kp F8  &kp F9                      &trans  &kp HOME  &kp UP    &kp END    &trans
-&kp LEFT_SHIFT  &trans   &kp F4   &kp F5  &kp F6  &trans      &trans  &trans  &kp LEFT  &kp DOWN  &kp RIGHT  &trans
-&trans          &kp F12  &kp F1   &kp F2  &kp F3  &trans      &trans  &trans  &trans    &kp DOWN  &trans     &trans
-&trans          &kp F11  &kp F10  &trans  &trans  &trans      &trans  &trans                                 &trans
+&trans          &trans   &kp F7   &kp F8  &kp F9                          &trans  &kp HOME  &kp UP    &kp END    &trans
+&kp LEFT_SHIFT  &trans   &kp F4   &kp F5  &kp F6  &bt BT_CLR      &trans  &trans  &kp LEFT  &kp DOWN  &kp RIGHT  &trans
+&trans          &kp F12  &kp F1   &kp F2  &kp F3  &trans          &trans  &trans  &trans    &kp DOWN  &trans     &trans
+&trans          &kp F11  &kp F10  &trans  &trans  &trans          &trans  &trans                                 &trans
             >;
         };
 
@@ -99,15 +99,6 @@
         };
 
         layer_6 {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                          &trans
-            >;
-        };
-
-        layer_7 {
             bindings = <
 &trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
